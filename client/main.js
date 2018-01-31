@@ -4,21 +4,70 @@ var product = [
   "title": 'Hamburguesa',
   "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
   "description": "Mega hamburgues",
-  "price": "10.00",
+  "price": "$ 10.00",
 },
 {
   "id": "0",
   "title": 'Hamburguesa',
   "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
   "description": "Mega hamburgues",
-  "price": "10.00",
+  "price": "$ 10.00",
 },
 {
   "id": "0",
   "title": 'Hamburguesa',
   "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
   "description": "Mega hamburgues",
-  "price": "10.00",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
+},
+{
+  "id": "0",
+  "title": 'Hamburguesa',
+  "image": "https://cdn3.cnet.com/img/zti-8maGznHRwm0Q6af0m7InwzM=/fit-in/970x0/2017/03/22/1c848061-a343-460a-a044-b07cb94e7927/if-burger.jpg",
+  "description": "Mega hamburgues",
+  "price": "$ 10.00",
 },
 ]
 
@@ -39,7 +88,7 @@ txtFile.onreadystatechange = function() {
 }
 txtFile.send(null);
 
-var slc = 2;
+var slc = 10;
 var prod = product.slice(0, slc);
 
 
@@ -50,9 +99,8 @@ function render(){
   var html = prod.map(function(message,index){
     return(`
       <div class="message">
-      <h3 class="card-title">${message.title}</h3>
-      <hr class="card-div">
       <img src="${message.image}" alt="Product image">
+      <h3 class="card-title">${message.title}</h3>
       <p class="card-description">${message.description}</p>
       <div class="card-price">${message.price}</div>
       </div>
@@ -94,7 +142,7 @@ var checkForscroll = function () {
   var pageOffset = window.pageYOffset + window.innerHeight;
 
   if (pageOffset > lastDivOffset) {
-    slc = slc + 2;
+    slc = slc + 10;
     prod = product.slice(0, slc);
     console.log(slc);
     render(prod);
@@ -119,4 +167,11 @@ function myFunction() {
     header.classList.remove("sticky");
     headerhelper.style.display ='none';
   }
+}
+
+
+// Scroll to top
+var top = document.getElementById("sclltp");
+function scrollWin() {
+    window.scrollTo(0,0);
 }
