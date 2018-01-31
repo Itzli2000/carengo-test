@@ -50,11 +50,11 @@ function render(){
   var html = prod.map(function(message,index){
     return(`
       <div class="message">
-      <p><strong>Producto </strong>${message.title}</p>
-      <hr>
-      <img src="${message.image}" alt="Product image" style="height:auto;">
-      <p><strong>Descripción </strong>${message.description}</p>
-      <p><strong>Precio $</strong>${message.price}</p>
+      <h3 class="card-title">${message.title}</h3>
+      <hr class="card-div">
+      <img src="${message.image}" alt="Product image">
+      <p class="card-description">${message.description}</p>
+      <div class="card-price">${message.price}</div>
       </div>
       `);
   }).join('  ');
@@ -105,6 +105,7 @@ window.onscroll = function() {myFunction()};
 
 // Get the header
 var header = document.getElementById("title");
+var headerhelper = document.getElementById("stickyhidde");
 
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
@@ -113,7 +114,9 @@ var sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
+    headerhelper.style.display ='block';
   } else {
     header.classList.remove("sticky");
+    headerhelper.style.display ='none';
   }
 }
