@@ -96,10 +96,10 @@ body {
 }
 .message {
   width: 90%;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   max-width: 250px;
   margin: 10px auto;
   border-radius: 10px;
